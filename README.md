@@ -1,3 +1,16 @@
+Запуск сервиса:
+
+```
+git clone git@github.com:12masek34/lexicom_test.git
+
+cd lexicom_test
+
+docker-compose build
+
+docker-compose up
+```
+
+
 Ответ на 2 вопрос.
 
 Создал  таблицы:
