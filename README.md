@@ -41,3 +41,12 @@ WHERE short_names.name_ = split_part(full_names.name_, '.', 1)
 ```
 
 Запрос выполняется быстро.
+
+Проверить можно запросом.
+
+```
+SELECT short_names.name_, short_names.status, full_names.name_, full_names.status
+FROM short_names
+JOIN full_names
+ON  short_names.name_ = split_part(full_names.name_, '.', 1)
+```
