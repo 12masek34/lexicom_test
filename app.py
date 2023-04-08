@@ -16,7 +16,7 @@ app = FastAPI()
 
 
 @app.get('/check_data', status_code=status.HTTP_200_OK)
-async def check_address(phone: PhoneSchema = Depends(), db: Redis = Depends(get_db)) -> str | None:
+async def check_address(phone: PhoneSchema = Depends(), db: Redis = Depends(get_db)) -> str:
     """Get address by phone number."""
 
     address = await get_address(db, phone.phone)

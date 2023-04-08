@@ -21,6 +21,15 @@ shuffle(table2)
 table2[-1] = table2[-1].replace(',', ';')
 
 with open('test.sql', 'w') as f:
+
+    f.write('create table short_names (\n')
+    f.write('name_ varchar(50),\n')
+    f.write('status integer\n')
+    f.write(');\n')
+    f.write('create table full_names (\n')
+    f.write('name_ varchar(50),\n')
+    f.write('status integer\n')
+    f.write(');\n')
     f.write('truncate short_names;\n')
     f.write('insert into short_names (name_, status)\n')
     f.write('values\n')
