@@ -26,3 +26,5 @@ FROM short_names
 WHERE short_names.name_ = split_part(full_names.name_, '.', 1)
 
 ```
+
+Запрос выполняется быстро.

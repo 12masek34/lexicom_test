@@ -4,7 +4,7 @@ from pydantic import BaseModel, constr
 class PhoneSchema(BaseModel):
     """Phone schema."""
 
-    phone: constr(regex=r'^[1-9]{11}$')
+    phone: constr(regex=r'^[0-9]{11}$')
 
 
 class AddressSchema(BaseModel):

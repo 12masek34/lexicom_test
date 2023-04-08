@@ -20,6 +20,7 @@ async def check_address(phone: PhoneSchema = Depends(), db: Redis = Depends(get_
     """Get address by phone number."""
 
     address = await get_address(db, phone.phone)
+    validate_miss_address(address)
 
     return address
 
